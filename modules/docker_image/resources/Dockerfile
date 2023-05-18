@@ -21,9 +21,6 @@ ENV PATH=/usr/bin:/usr/local/bin:$PATH
 #FIXME:unpin jupyterlab version
 RUN wget --quiet https://bootstrap.pypa.io/get-pip.py && python3.8 get-pip.py
 RUN pip3 install --no-cache-dir \
-        jupyterlab==3.6.3 \
-        pyspark==3.3.2
-=======
         jupyterlab==$JUPYTERLAB_VERSION \
         pyspark==3.3.2 \
         mlflow==2.3.0
